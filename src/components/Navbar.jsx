@@ -26,12 +26,12 @@ export const Navbar = () => {
                         Sign Up
                     </button>
                 </div>
-                <div className='md:hidden'>
-                    <MenuIcon className='w-5' onClick={handleClick}/>
+                <div className='md:hidden' onClick={handleClick}>
+                    {!isOpen ? <MenuIcon className='h-6 w-6' /> : <XIcon className='h-6 w-6' />}
                 </div>
             </div>
 
-            <ul className='absolute bg-zinc-200 w-full px-8'>
+            <ul className={!isOpen ? 'hidden' : 'absolute bg-zinc-200 w-full px-8'}>
                 <li className='border-b border-zinc-300 w-full'>Home</li>
                 <li className='border-b border-zinc-300 w-full'>About</li>
                 <li className='border-b border-zinc-300 w-full'>Support</li>
