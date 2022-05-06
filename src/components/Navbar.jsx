@@ -26,7 +26,7 @@ export const Navbar = () => {
                         Sign Up
                     </button>
                 </div>
-                <div className='md:hidden' onClick={handleClick}>
+                <div className='md:hidden mr-4' onClick={handleClick}>
                     {!isOpen ? <MenuIcon className='h-6 w-6' /> : <XIcon className='h-6 w-6' />}
                 </div>
             </div>
